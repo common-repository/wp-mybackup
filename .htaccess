@@ -1,0 +1,15 @@
+
+#  Added automatically by WP MyBackup			
+<IfModule rewrite_module>
+	# Turn off output buffering/compression
+	RewriteRule ^(.*)$ $1 [NS,E=no-gzip:1,E=dont-vary:1]
+			
+	# Denies direct access to the following files
+	RewriteRule "\.(log|simplepwd)$" "-" [F]
+</IfModule>
+
+
+<IfModule buffer_module>
+	BufferSize 1
+</IfModule>
+		
